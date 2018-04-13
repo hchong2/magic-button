@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<script src="jquery-3.3.1.min.js"></script>
+	<style>
+		button{
+		    position:absolute;
+		    top:10px;
+		    left:10px;
+		}
+	</style>
+</head>
+
+<body>
+	<button>Magic Button</button>
+</body>
+
+<script>
+
+$(function(){
+	$("button").on({
+    	mouseover:function(){
+        	$(this).css({
+                left:(Math.random()*200)+"px",
+                top:(Math.random()*200)+"px"
+            });
+    	}
+	});
+})
+</script>
+</html>
