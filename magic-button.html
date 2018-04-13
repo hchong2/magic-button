@@ -8,23 +8,35 @@
 		    top:10px;
 		    left:10px;
 		}
+		div#magicDiv{
+			position:absolute;
+			top:10px;
+			left:10px;
+			padding:50px;
+		}
 	</style>
 </head>
 
 <body>
-	<button>Magic Button</button>
+	<div id="magicDiv" style="width:75px;height:75px">
+		<button id="magicButton">Magic Button</button>
+	</div>
 </body>
 
 <script>
 
 $(function(){
-	$("button").on({
+	$("div#magicDiv").on({
     	mouseover:function(){
         	$(this).css({
-                left:(Math.random()*200)+"px",
-                top:(Math.random()*200)+"px"
+                left:(Math.random()*500)+"px",
+                top:(Math.random()*500)+"px"
             });
     	}
+	});
+
+	$("button#magicButton").click(function(e){
+		alert("You did it!");
 	});
 })
 </script>
